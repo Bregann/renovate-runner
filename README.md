@@ -10,7 +10,7 @@ Runs [Renovate](https://docs.renovatebot.com/) on a schedule for my projects, re
   - Pull requests: Read and write
   - Issues: Read and write (Dependency Dashboard)
   - Workflows: Read and write (updates to `.github/workflows`)
-  - Commit statuses: Read
+  - Commit statuses: Read and write (Renovate sets its own status checks on update branches)
   - Checks: Read
   - Dependabot alerts: Read (security fixes)
   - Metadata: Read (automatic)

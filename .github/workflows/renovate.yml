@@ -1,12 +1,12 @@
 # Runs Renovate for all repos listed in config.js.
-# Every 4 hours: security fixes and Dependency Dashboard ticks are picked up quickly.
-# Normal updates still wait for each repo's own schedule ("before 6am on monday"),
-# and the 00:17 and 04:17 UTC runs always land inside that window.
+# Hourly: security fixes and Dependency Dashboard ticks are picked up quickly.
+# Normal updates still wait for each repo's own schedule (Mondays). GitHub runs
+# scheduled workflows late or skips them when busy, so running often matters.
 name: Renovate
 
 on:
   schedule:
-    - cron: '17 */4 * * *'
+    - cron: '17 * * * *'
   workflow_dispatch:
     inputs:
       log_level:

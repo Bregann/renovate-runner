@@ -2,7 +2,7 @@
 
 Runs [Renovate](https://docs.renovatebot.com/) on a schedule for my projects, replacing the hosted Mend app (which visited repos too rarely to hit a weekly window).
 
-- **When:** every 4 hours (`.github/workflows/renovate.yml`). Normal updates only happen in each repo's own schedule (Mondays before 6am UK). Security fixes and Dependency Dashboard ticks are handled on any run.
+- **When:** hourly (`.github/workflows/renovate.yml`). Normal updates only happen in each repo's own schedule (any time on Monday, UK). Security fixes and Dependency Dashboard ticks are handled on any run.
 - **Which repos:** `config.js` → `repositories`. Add a repo there **and** give the token access to it.
 - **Run now:** Actions → Renovate → Run workflow.
 - **Token:** repository secret `RENOVATE_TOKEN`, a fine-grained PAT with access to the repos above:
